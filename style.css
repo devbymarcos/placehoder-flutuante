@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 900px;
+  color: #7918e7;
+}
+
+.input-control {
+  margin-bottom: 1rem;
+}
+
+label {
+  position: relative;
+}
+
+label select,
+label input {
+  width: 25rem;
+  border: 2px solid blueviolet;
+  border-radius: 3px;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+label p {
+  pointer-events: none;
+  position: absolute;
+  padding: 0 0.5rem;
+  top: 50%;
+  margin-left: 0.8rem;
+  transform: translateY(-10px);
+  color: blueviolet;
+  background-color: #fff;
+  font-size: 0.95rem;
+  transition: all 0.5s;
+}
+
+label input:focus ~ p,
+label input:valid ~ p,
+label select:valid ~ p,
+label select:focus ~ p {
+  transform: translateY(-35px);
+}
+
+label select:not(:valid) ~ p {
+  transform: translateY(-10px);
+}
